@@ -1,0 +1,1990 @@
+/*-----Algemeen: Body-----*/
+/*________________________*/
+body {
+  margin:0;
+  padding:0;
+  color: rgba(40, 50, 60, 1);
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+/*-----Algemeen: Header-----*/
+/*__________________________*/
+header {
+      padding: 25px 10px;
+      background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+      color: white;
+}
+header img.statistieken {
+      width: 50%;
+      margin: 150px 0%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0.5;
+}
+header .navigatiebalk {
+      width: 80%;
+      margin: 0%;
+      padding: 0.5% 10%;
+      background-attachment: fixed;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: linear-gradient(to right, rgba(222,49,105,0.5), rgba(227,49,75,0.5));
+      font-weight: 400;
+}
+header .navigatiebalk:hover {
+      background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+}
+header .navigatiebalk a img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 5%;
+      height: 5%;
+}
+header .navigatiebalk .navlang {
+      float: right;
+      width: 95%;
+      text-align: right;
+}
+header .navigatiebalk .navlang ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 1% 0.25%;
+      padding: 1%;
+      transition: border 0.25s;
+      border-bottom: transparent 2.5px solid;
+
+}
+header .navigatiebalk .navlang ul li a {
+      text-decoration: none;
+      -moz-text-decoration: none;
+      color: white;
+}
+header .navigatiebalk .navlang ul li:hover {
+      border-bottom-color: white;
+}
+header .navigatiebalk .navlang ul li#DEMOnav {
+      border: 2.5px solid rgba(255,255,255,1);
+      border-radius: 10px;
+      padding: 0.75%;
+      margin: 0.75%;
+      background-color: rgba(255, 255, 255, 1);
+      transition: background 0.5s;
+}
+header .navigatiebalk .navlang ul li#DEMOnav a {
+      color: rgba(227,49,75,1);
+}
+header .navigatiebalk .navlang ul li#DEMOnav:hover {
+    background: transparent;
+}
+header .navigatiebalk .navlang ul li#DEMOnav a i#pijlDEMOnav {
+      border: solid #e3314b;
+      border-width: 0 4px 4px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      margin: 0 0.25em;
+      color: rgba(255,255,255,1)
+}
+/** {
+  box-sizing: border-box;
+}*/
+header .navigatiebalk .navkort {
+  display: none;
+  visibility: hidden;
+}
+header .navigatiebalk .navkort .menu {
+  cursor: pointer;
+  z-index: 150;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 4.5% 10%;
+}
+header .navigatiebalk .navkort .menu .streepje {
+  background: rgba(255, 255, 255, 1);
+  transition: all 0.5s ease;
+  width: 27.5px;
+  height: 2px;
+  z-index: 175;
+}
+header .navigatiebalk .navkort .menu .bovenstestreepje, header .navigatiebalk .navkort .menu .onderstestreepje {
+  margin: 0 auto;
+}
+header .navigatiebalk .navkort .menu .middelstestreepje {
+  margin: 7.5px auto;
+}
+header .navigatiebalk .navkort .menu.open .bovenstestreepje {
+  transform: rotate(45deg);
+  margin: 10px 0px 0px 0px;
+  width: 35px;
+}
+header .navigatiebalk .navkort .menu.open .middelstestreepje {
+  opacity: 0;
+}
+header .navigatiebalk .navkort .menu.open .onderstestreepje {
+  transform: rotate(-45deg);
+  margin: -20px 0px 0px 0px;
+  width: 35px;
+}
+header .navigatiebalk .navkort .navkleinscherm {
+  z-index: 125;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 65px 7% 25px 0px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(222,49,105,0.5), rgba(227,49,75,0.5));
+}
+header .navigatiebalk .navkort .navkleinscherm:hover {
+  background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+}
+header .navigatiebalk .navkort .navkleinscherm:not(.open) {
+  visibility: hidden;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: slideOutRight;
+}
+header .navigatiebalk .navkort .navkleinscherm.open {
+  visibility: visible;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: slideInRight;
+}
+header .navigatiebalk .navkort .navkleinscherm li {
+  list-style-type: none;
+  padding: 10px 25px;
+  text-align: right;
+}
+header .navigatiebalk .navkort .navkleinscherm li a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  border-right: 2.5px solid transparent;
+  padding: 0px;
+  transition: border 0.5s, padding 0.5s;
+}
+header .navigatiebalk .navkort .navkleinscherm li a:hover {
+  border-right: 2.5px solid rgba(255,255,255,1);
+  padding: 5px 15px;
+}
+header .headertekst {
+      font-style: italic;
+}
+header .headertekst h1 {
+      letter-spacing: -0.025em;
+      font-size: 4em;
+      margin: 0%;
+}
+header .headertekst h2 {
+      font-size: 1.25em;
+      line-height: 1.25em;
+}
+
+/*-----Algemeen: Header-----*/
+/*__________________________*/
+main {
+      width: 60%;
+      margin: 5% auto;
+      line-height: 1.5em;
+}
+
+/*-----Algemeen: Footer-----*/
+/*__________________________*/
+footer {
+  background-color: rgba(40, 50, 60, 1);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-weight: 100;
+  line-height: normal;
+  text-align: center;
+  padding: 1% 0%;
+}
+footer h5 {
+  width: 80%;
+  font-size: 2.5em;
+  font-style: italic;
+  margin: 0% auto;
+}
+footer .footer {
+  width: 50%;
+  margin: 1% auto;
+  clear: both;
+  height: 150px;
+}
+footer .footer ul.sitemap{
+  text-align: left;
+}
+footer .footer ul li a, footer ul.copyright li a {
+  text-decoration: none;
+  -moz-text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+footer .footer ul li a:hover,  footer ul.copyright li a:hover {
+  text-decoration: underline;
+  -moz-text-decoration: underline;
+}
+footer .footer ul.contact {
+  float: left;
+  text-align: center;
+}
+footer .footer ul.sitemap {
+  float: right;
+}
+footer .footer ul li {
+  list-style: none;
+  display: block;
+  line-height: 1.5em;
+}
+footer .footer ul li a:hover,  footer ul.copyright li a:hover {
+  text-decoration: underline;
+  -moz-text-decoration: underline;
+}
+footer .footer ul.contact li.socialmedia {
+  display: inline-block;
+}
+footer .footer ul.contact li.socialmedia a img {
+  max-width: 100%;
+  width: 50px;
+  border-radius: 50%;
+}
+footer ul.copyright {
+  width: 75%;
+  margin: 0% auto;
+  text-align: center;
+  clear: both;
+}
+footer ul.copyright li {
+  display: inline;
+}
+footer ul.copyright li.robarov {
+  text-align: left;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 100;
+}
+footer ul.copyright li.disclaimer {
+  text-align: right;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 100;
+}
+
+
+
+
+
+/*-----Index: Header-----*/
+/*_______________________*/
+#index header {
+  height: 600px;
+}
+#index header img.statistieken {
+  height: 500px;
+}
+#index header .headertekst {
+  margin: 7.5% auto 7.5% 10%;
+  width: 65%;
+}
+#index header .headertekst h1 {
+  margin: 0% 0% 1% 0%;
+}
+#index header .headertekst h2 {
+  width: 85%;
+}
+
+/*-----Index: Main-----*/
+/*_____________________*/
+#index main a#voorweb, #index main a#voormail {
+  color: rgba(40, 50, 60, 1);
+  text-decoration: none;
+  -moz-text-decoration: none;
+  display: inline-block;
+}
+#index main a .web, #index main a .mail {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 5%;
+  background-color: white;
+  margin: 0%;
+}
+#index main a .mail {
+  clear: both;
+}
+#index main a .web h3, #index main a .mail h3 {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 1.5%;
+}
+#index main a .web #naarweb, #index main a .mail #naarmail {
+  background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+  color: rgba(255,255,255,1);
+  border-radius: 10px;
+  text-decoration: none;
+  -moz-text-decoration: none;
+  padding: 1.5%;
+  width: 35%;
+  border: 2.5px solid rgba(227,49,75,1);
+  display: block;
+  margin: 2.5% auto 0% 0%;
+  line-height: 0.85em;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+#index main a .web #naarweb:hover, #index main a .mail #naarmail:hover {
+  background: transparent;
+  color: rgba(227,49,75,1);
+}
+#index main a .web #naarweb i#pijlnaarweb, #index main a .mail #naarmail i#pijlnaarmail {
+  border: solid rgba(255,255,255,1);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 100;
+}
+#index main a .web #naarweb .bronzichtbaar, #index main a .mail #naarmail .bronzichtbaar {
+  display: none;
+  visibility: hidden;
+}
+#index main #smileys {
+  max-width: 80%;
+  margin: 0% auto;
+}
+#index main #smileys img {
+  max-width: 100%;
+  width: 25%;
+  float: left;
+  margin: 5% 0%;
+  filter: grayscale(1);
+  transition: transform 1s, filter 0.5s;
+}
+#index main #smileys img:hover, #index main #smileys.gekleurd img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+#index main #smileys.gekleurd img {
+  filter: grayscale(0);
+}
+#index main .klantenslider {
+  text-align: center;
+  margin: 5% 0% 0% 0%;
+}
+#index main .klantenslider .review h4 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+#index main .klantenslider .review p {
+  margin: 0% 10%;
+  line-height: 1.75em;
+  font-style: italic;
+}
+#index main .klantenslider #review3 h4 {
+  margin-top: 2.5%;
+}
+#index main .klantenslider button.pijllinks, #index main .klantenslider button.pijlrechts {
+      position: absolute;
+      border: solid #e3314b;
+      border-width: 0 10px 10px 0;
+      display: inline-block;
+      padding: 10px;
+      background-color: white;
+      z-index: 75;
+      cursor: pointer;
+}
+#index main .klantenslider button.pijlrechts {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      right: 0;
+      top: 35%;
+}
+#index main .klantenslider button.pijllinks {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      left: 0;
+      top: 35%;
+}
+#index main .klantenslider ul.slick-dots {
+      display: block;
+      width: 100%;
+      list-style: none;
+}
+#index main .klantenslider ul.slick-dots li {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+}
+#index main .klantenslider ul.slick-dots li button {
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent;
+}
+#index main .klantenslider button.pijllinks, #index main .klantenslider button.pijlrechts, #index main .klantenslider ul.slick-dots li button:focus,
+#index main .klantenslider .review:focus, #index main .klantenslider .review a:focus {
+      outline: none;
+}
+#index main .klantenslider ul.slick-dots li button:hover:before, #index main .klantenslider ul.slick-dots li button:focus:before {
+      opacity: 1;
+}
+#index main .klantenslider ul.slick-dots li button:before {
+      font-size: 25px;
+      content: '•';
+      opacity: .25;
+      color: black;
+}
+#index main .klantenslider ul.slick-dots li.slick-active button:before {
+      opacity: .75;
+      color: black;
+}
+#index main a#klantworden {
+  background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+  color: rgba(255,255,255,1);
+  border-radius: 10px;
+  text-decoration: none;
+  -moz-text-decoration: none;
+  padding: 1.5%;
+  border: 2.5px solid rgba(227,49,75,1);
+  display: block;
+  width: 27.5%;
+  margin: 0% auto;
+  line-height: 0.85em;
+  text-align: center;
+  transition: background 0.75s, color 0.5s;
+}
+#index main a#klantworden:hover {
+  background: transparent;
+  color: rgba(227,49,75,1);
+}
+#index main a#klantworden i#pijlklantworden {
+  border: solid rgba(255,255,255,1);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 100;
+}
+#index main a#klantworden .bronzichtbaar {
+  display: none;
+  visibility: hidden;
+}
+
+
+
+
+
+/*-----Secundaire pagina's: Header-----*/
+/*_____________________________________*/
+#voorweb header,
+#voormail header,
+#tarieven header,
+#demo header,
+#demosucces header,
+#error header,
+#disclaimer header {
+  height: 400px;
+}
+#voorweb header img.statistieken,
+#voormail header img.statistieken,
+#tarieven header img.statistieken,
+#demo header img.statistieken,
+#demosucces header img.statistieken,
+#error header img.statistieken,
+#disclaimer header img.statistieken {
+  height: 300px;
+}
+#voorweb header .headertekst,
+#voormail header .headertekst,
+#tarieven header .headertekst,
+#demo header .headertekst,
+#demosucces header .headertekst,
+#error header .headertekst,
+#disclaimer header .headertekst {
+  margin: 7.5% 10%;
+  width: 55%;
+}
+#voorweb header .headertekst h1,
+#voormail header .headertekst h1,
+#tarieven header .headertekst h1,
+#demo header .headertekst h1,
+#demosucces header .headertekst h1,
+#error header .headertekst h1
+#disclaimer header .headertekst h1 {
+  margin-bottom: 2.5%;
+}
+
+
+
+
+
+/*-----Voorweb: Main-----*/
+/*_______________________*/
+#voorweb main {
+  width: 70%;
+  margin: 5% auto;
+  line-height: 1.5em;
+}
+#voorweb main .pure-u-1-3 {
+  color: rgba(40, 50, 60, 1);
+  text-decoration: none;
+  -moz-text-decoration: none;
+  font-size: 1.75em;
+  box-sizing: border-box;
+}
+#voorweb main .pure-u-1-3:first-child {
+  padding: 0% 1% 0% 0%;
+}
+#voorweb main .pure-u-1-3:nth-child(2) {
+  padding: 0% 0.5%;
+}
+#voorweb main .pure-u-1-3:last-child {
+  padding: 0% 0% 0% 1%;
+}
+#voorweb main .makennavigatie, #voorweb main .verzamelennavigatie, #voorweb main .analyserennavigatie {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 10%;
+  text-align: center;
+  box-sizing: border-box;
+}
+#voorweb main .navigatiemain img {
+  max-width: 100%;
+  width: 50%;
+  margin: 5% auto;
+  display: block;
+  transition: transform 0.5s;
+}
+#voorweb main .navigatiemain img:hover {
+  transform: scale(1.2);
+}
+#voorweb main .maken, #voorweb main .verzamelen, #voorweb main .analyseren {
+  margin: 7.5% auto 0% auto;
+}
+#voorweb main #Maken, #voorweb main #Verzamelen, #voorweb main #Analyseren {
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+}
+#voorweb main h3 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+#voorweb main .makenrechts img, #voorweb main .verzamelen img, #voorweb main .analyseren img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  max-width: 100%;
+}
+#voorweb main .makenrechts {
+  height: 830px;
+  width: 53%;
+  display: inline-block;
+  vertical-align: top;
+}
+#voorweb main .makenrechts img {
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+#voorweb main .makenlinks {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.5%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+#voorweb main .makenpadding {
+  display: table;
+  height: 830px;
+}
+#voorweb main .makeninhoud {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+#voorweb main .makeninhoud p, #voorweb main .makeninhoud h3 {
+  margin: 1% 10%;
+}
+#voorweb main .makeninhoud img {
+  width: 100%;
+  max-width: 100%;
+  margin: 5% auto;
+  border-top: 5px solid rgba(40, 50, 60, 0.025);
+  border-bottom: 5px solid rgba(40, 50, 60, 0.025);
+}
+#voorweb main .verzamelenlinks {
+  height: 300px;
+  width: 64%;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+#voorweb main .verzamelenpadding {
+  display: table;
+  height: 300px;
+}
+#voorweb main .verzameleninhoud {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+#voorweb main .verzameleninhoud p, #voorweb main .verzameleninhoud h3 {
+  margin: 1% 10%;
+}
+#voorweb main .verzamelenrechts {
+  width: 34%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1.5%;
+  height: 300px;
+}
+#voorweb main .verzamelenrechts img{
+  display: table-cell;
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+#voorweb main .pure-u-1-2, #voorweb main .pure-u-1 {
+  box-sizing: border-box;
+  padding: 1% 0%;
+}
+#voorweb main .analyserenrechts {
+  padding: 1% 0% 0% 1.5%;
+}
+#voorweb main .analyserentekst {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 5%;
+  background-color: white;
+  box-sizing: border-box;
+}
+#voorweb main .analyserenfotoslinks {
+  margin-bottom: 1%;
+}
+#voorweb main .analyserenfotoslinks:last-child {
+  margin-bottom: 0%;
+}
+
+
+
+
+
+/*-----Voormail: Main-----*/
+/*______________________*/
+#voormail main {
+  width: 70%;
+  margin: 5% auto;
+  line-height: 1.5em;
+}
+#voormail main .pure-u-1-3 {
+  color: rgba(40, 50, 60, 1);
+  text-decoration: none;
+  -moz-text-decoration: none;
+  font-size: 1.75em;
+  box-sizing: border-box;
+}
+#voormail main .pure-u-1-3:first-child {
+  padding: 0% 1% 0% 0%;
+}
+#voormail main .pure-u-1-3:nth-child(2) {
+  padding: 0% 0.5%;
+}
+#voormail main .pure-u-1-3:last-child {
+  padding: 0% 0% 0% 1%;
+}
+#voormail main .makennavigatie, #voormail main .verzamelennavigatie, #voormail main .analyserennavigatie {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 10%;
+  text-align: center;
+  box-sizing: border-box;
+}
+#voormail main .navigatiemain img {
+  max-width: 100%;
+  width: 50%;
+  margin: 5% auto;
+  display: block;
+  transition: transform 0.5s;
+}
+#voormail main .navigatiemain img:hover {
+  transform: scale(1.2);
+}
+#voormail main .maken, #voormail main .verzamelen, #voormail main .analyseren {
+  margin: 7.5% auto 0% auto;
+}
+#voormail main #Maken, #voormail main #Verzamelen, #voormail main #Analyseren {
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+}
+#voormail main h3 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+#voormail main .maken .makenrechts img, #voormail main .verzamelen img, #voormail main .analyseren img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  max-width: 100%;
+}
+#voormail main .makenrechts {
+  height: 830px;
+  width: 53%;
+  display: inline-block;
+  vertical-align: top;
+}
+#voormail main .makenrechts img {
+  display: table-cell;
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+#voormail main .makenlinks {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.5%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+#voormail main .makenpadding {
+  display: table;
+  height: 830px;
+}
+#voormail main .makeninhoud {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+#voormail main .makeninhoud p, #voormail main .makeninhoud h3 {
+  margin: 1% 10%;
+}
+#voormail main .makeninhoud img {
+  width: 100%;
+  max-width: 100%;
+  margin: 5% auto;
+  border-top: 5px solid rgba(40, 50, 60, 0.025);
+  border-bottom: 5px solid rgba(40, 50, 60, 0.025);
+}
+#voormail main .verzamelenlinks {
+  height: 300px;
+  width: 58%;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+#voormail main .verzamelenpadding {
+  display: table;
+  height: 300px;
+}
+#voormail main .verzameleninhoud {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+#voormail main .verzameleninhoud p, #voormail main .verzameleninhoud h3 {
+  margin:  1% 10%;
+}
+#voormail main .verzamelenrechts {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1.5%;
+  height: 300px;
+}
+#voormail main .verzamelenrechts img{
+  display: table-cell;
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+#voormail main .pure-u-1-2, #voormail main .pure-u-1 {
+  box-sizing: border-box;
+  padding: 1% 0%;
+}
+#voormail main .analyserenlinks {
+  padding: 1% 1.5% 0% 0%;
+}
+#voormail main .analyserentekst {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 10%;
+  box-sizing: border-box;
+}
+#voormail main .analyserentekst {
+  padding: 5%;
+}
+#voormail main .analyserenfotosrechts {
+  margin-bottom: 1%;
+}
+#voormail main .analyserenfotosrechts:last-child {
+  margin-bottom: 0%;
+}
+
+
+
+
+
+/*-----Tarieven: Main-----*/
+/*________________________*/
+#tarieven main table.tabel {
+  width: 70%;
+  margin: 0% auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+}
+#tarieven main table.tabel tr td {
+  padding: 2.5% 5%;
+  border-right: 1px rgba(0, 0, 0, 0.025) solid;
+  border-left: 1px rgba(0, 0, 0, 0.025) solid;
+}
+#tarieven main table.tabel tr th {
+  padding: 5% 5% 2.5% 5%;
+  font-size: 1.4em;
+}
+#tarieven main table.tabel tr th span.tabelgroot {
+  font-size: 1.25em;
+  display: inline-block;
+  margin: 0% 0.5%;
+}
+#tarieven main table.tabel tr.oneven {
+  background-color: rgba(255,255,255,1);
+}
+#tarieven main table.tabel tr.even {
+  background-color: rgba(40, 50, 60, 0.05);
+}
+#tarieven main table.tabel .tabellinks {
+  width: 55%;
+}
+#tarieven main table.tabel .tabelrechts {
+  width: 45%;
+  text-align: center;
+}
+#tarieven main table.tabel .tabelrechts img {
+  max-width: 100%;
+  width: 10%;
+}
+#tarieven main a#DEMOtarieven {
+  background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+  color: rgba(255,255,255,1);
+  border-radius: 10px;
+  text-decoration: none;
+  -moz-text-decoration: none;
+  padding: 1.5%;
+  border: 2.5px solid rgba(227,49,75,1);
+  display: block;
+  width: 25%;
+  margin: 5% 15%;
+  line-height: 0.85em;
+  text-align: center;
+  font-size: 1.15em;
+  transition: background 0.75s, color 0.5s;
+}
+#tarieven main a#DEMOtarieven:hover {
+  background: transparent;
+  color: rgba(227,49,75,1);
+}
+#tarieven main a#DEMOtarieven i#pijlDEMOtarieven {
+  border: solid rgba(255,255,255,1);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 100;
+}
+
+
+
+
+
+/*-----Demo: Main-----*/
+/*__________________*/
+#demo main .intro {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 5%;
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+}
+#demo main .intro h3 {
+  font-size: 1.5em;
+  margin-bottom: 1%;
+}
+#demo main form {
+  width: 80%;
+  margin: 0% auto;
+}
+#demo main form label {
+  display: block;
+  margin: 5% 0% 1% 0%;
+}
+#demo main form label span.sterretje {
+  color: rgba(227,49,75,1);
+  font-weight: 700;
+}
+#demo main form input {
+  border-radius: 10px;
+  padding: 1%;
+  border: solid 2.5px rgba(40,50,60,0.25);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1em;
+  min-height: 1.5em;
+  margin: 0 0 1.25% 0;
+  display: block;
+  width: 100%;
+}
+#demo main form input:focus {
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  outline: none;
+  border: none;
+}
+#demo main form div input[type="checkbox"] {
+  width: 1.5em;
+  min-height: 1.25em;
+  font-size: 0.75em;
+  margin: 0% 0.5% 0% 0%;
+  display: inline-block;
+  position: relative;
+  top: 1.5px;
+}
+#demo main form div input[type="checkbox"]:focus {
+  box-shadow: none;
+}
+#demo main form div label.labelvoorweb, #demo main form div label.labelvoormail {
+  display: inline-block;
+  margin: 0%;
+}
+#demo main form button.buttonDEMOaanvragen {
+  background: linear-gradient(to right, rgba(222,49,105,1), rgba(227,49,75,1));
+  color: rgba(255,255,255,1);
+  border-radius: 10px;
+  text-decoration: none;
+  -moz-text-decoration: none;
+  padding: 1%;
+  border: 2.5px solid rgba(227,49,75,1);
+  display: block;
+  font-size: 1.1em;
+  margin: 5% -2.5% 0% auto;
+  transition: background 0.75s, color 0.5s;
+}
+#demo main form button.buttonDEMOaanvragen:focus {
+  outline: none;
+}
+#demo main form button.buttonDEMOaanvragen:hover {
+  background: transparent;
+  color: rgba(227,49,75,1);
+}
+#demo main form button.buttonDEMOaanvragen i#pijlDEMOaanvragen {
+  border: solid rgba(255,255,255,1);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 100;
+  margin: 0 0.25em;
+}
+#demo main form .error-message {
+  color: rgba(227,49,75,1);
+}
+#demo main form input.ongeldig:invalid {
+  border: 2.5px rgba(227,49,75,1) solid;
+}
+
+
+
+
+
+/*-----Demosucces: Main-----*/
+/*________________________*/
+#demosucces main .demosucces {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 2.5px rgba(0, 0, 0, 0.125);
+  padding: 5%;
+  background-color: white;
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
+}
+#demosucces main .demosucces h3 {
+  font-size: 1.5em;
+  margin-bottom: 1%;
+  display: inline-block;
+}
+#demosucces main .demosucces img {
+  max-width: 100%;
+  width: 50px;
+  display: inline-block;
+  margin: 0% 0% -0.5% 0.5%;
+}
+
+
+
+
+
+/*-----Disclaimer: Main-----*/
+/*__________________________*/
+#disclaimer main {
+  width: 50%;
+}
+#disclaimer main p {
+  line-height: 1.5em;
+  margin: 2.5% auto;
+}
+
+
+
+
+
+/*-----Error: Main-----*/
+/*_____________________*/
+#error main p {
+  font-size: 1.15em;
+}
+#error main p a {
+  color: rgba(40, 50, 60, 1);
+  text-decoration: none;
+}
+#error main p a:hover {
+  border-bottom: 2.5px solid rgba(40, 50, 60, 1);
+}
+
+
+
+
+
+/*-----Keyframes-----*/
+/*___________________*/
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+}
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+/*-----Responsive-----*/
+/*____________________*/
+@media only screen and (max-width: 1765px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1725px) {
+  #index main a#klantworden {
+    width: 30%;
+  }
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 780px;
+    width: 53%;
+    display: inline-block;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    display: table;
+    height: 780px;
+  }
+  #voorweb main .verzamelenrechts {
+    width: 100%;
+    height: auto;
+    margin: 2.5% 0% 0% 0%;
+  }
+  #voorweb main .verzamelenlinks {
+    width: 100%;
+    padding: 5% 0%;
+    height: auto;
+  }
+  #voorweb main .verzamelenpadding {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1660px) {
+  #voormail main .verzamelenlinks {
+    height: 300px;
+    width: 50%;
+  }
+  #voormail main .verzamelenpadding {
+    height: 300px;
+  }
+  #voormail main .verzamelenrechts {
+    width: 48%;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  #index main a#klantworden {
+    width: 35%;
+  }
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 720px;
+    width: 53%;
+    display: inline-block;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    display: table;
+    height: 720px;
+  }
+}
+@media only screen and (max-width: 1580px) {
+  #voormail main .analyserenfotosrechts, #voorweb main .analyserenfotoslinks {
+    margin-bottom: 0.75%;
+  }
+  #tarieven main table.tabel {
+    width: 80%;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 35%;
+    margin: 5% 10%;
+  }
+}
+@media only screen and (max-width: 1545px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 1460px) {
+  #index main a#klantworden {
+    width: 35%;
+  }
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 720px;
+    width: 53%;
+    display: inline-block;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    display: table;
+    height: 720px;
+  }
+}
+@media only screen and (max-width: 1445px) {
+  header .headertekst h1 {
+        font-size: 3.25em;
+  }
+  header .headertekst h2 {
+        font-size: 1.15em;
+  }
+  #index header {
+    height: 500px;
+  }
+  #index header img.statistieken {
+    height: 400px;
+  }
+  #index main .klantenslider #review3 h4 {
+    font-size: 1.75em;
+  }
+  #voorweb header, #voormail header, #tarieven header, #demo header, #demosucces header, #error header, #disclaimer header {
+    height: 300px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #tarieven header img.statistieken, #demo header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 200px;
+  }
+  #voorweb header .headertekst h1, #voormail header .headertekst h1, #tarieven header .headertekst h1, #demo header .headertekst h1, #demosucces header .headertekst h1, #error header .headertekst h1 #disclaimer header .headertekst h1 {
+    margin-bottom: 2.5%;
+  }
+  #tarieven main table.tabel .tabellinks {
+    width: 65%;
+  }
+  #tarieven main table.tabel .tabelrechts {
+    width: 35%;
+  }
+  #tarieven main table.tabel .tabelrechts img {
+    width: 15%;
+  }
+  #disclaimer main {
+    width: 70%;
+  }
+  #error main p {
+    font-size: 1.05em;
+  }
+}
+@media only screen and (max-width: 1375px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    padding: 2% 1.5%;
+    width: 50%;
+  }
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 720px;
+    width: 60%;
+    display: inline-block;
+  }
+  #voormail main .makenlinks, #voorweb main .makenlinks {
+    width: 38%;
+  }
+  #voormail main .handtekening, #voorweb main .smileys {
+    display: none;
+    visibility: hidden;
+  }
+  #voormail main .verzamelenrechts {
+    width: 100%;
+    height: auto;
+    margin: 2.5% 0% 0% 0%;
+  }
+  #voormail main .verzamelenlinks {
+    width: 100%;
+    padding: 5% 0%;
+    height: auto;
+  }
+  #voormail main .verzamelenpadding {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  #index main a#klantworden {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1315px) {
+  #index main .klantenslider #review3 h4 {
+    font-size: 1.5em;
+  }
+  #voorweb main {
+    width: 80%;
+  }
+  footer h5 {
+    font-size: 2em;
+    margin: 1% auto;
+  }
+  footer .footer {
+    margin: 2% auto;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    width: 60%;
+    font-size: 0.95em;
+  }
+  #voormail main {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  #index main a#klantworden {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 1175px) {
+  header .headertekst h1 {
+        font-size: 2.75em;
+        line-height: 1em;
+  }
+  header .headertekst h2 {
+        font-size: 1em;
+        line-height: 1.5em;
+  }
+  #index header {
+    height: 400px;
+  }
+  #index header img.statistieken {
+    height: 300px;
+  }
+  #voorweb header, #voormail header, #tarieven header, #demo header, #demosucces header, #error header, #disclaimer header {
+    height: 250px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #tarieven header img.statistieken, #demo header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 150px;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 1.5em;
+  }
+  #tarieven main table.tabel {
+    width: 100%;
+  }
+  #tarieven main table.tabel .tabellinks {
+    width: 75%;
+  }
+  #tarieven main table.tabel .tabelrechts {
+    width: 25%;
+  }
+  #tarieven main table.tabel .tabelrechts img {
+    width: 25%;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 45%;
+    margin: 5% 0%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #voorweb main .makenlinks {
+     width: 37%;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 625px;
+    display: inline-block;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    display: table;
+    height: 625px;
+  }
+}
+@media only screen and (max-width: 1065px) {
+  header .navigatiebalk {
+    width: 90%;
+    padding: 1% 5%;
+  }
+  #index header .headertekst {
+    margin: 7.5% auto 7.5% 5%;
+  }
+  header .headertekst h1 {
+    font-size: 2.45em;
+  }
+  main {
+    width: 70%;
+  }
+  #index main .klantenslider .review h4{
+    font-size: 1.5em;
+  }
+  #index main .klantenslider #review3 h4 {
+    font-size: 1.25em;
+  }
+  #index main .klantenslider .review p{
+    font-size: 0.9em;
+  }
+  #index main a#klantworden {
+    font-size: 0.9em;
+  }
+  #demosucces main .demosucces h3 {
+    font-size: 1.25em;
+  }
+  #demosucces main .demosucces p {
+    font-size: 0.95em;
+  }
+  #demosucces main .demosucces img {
+    width: 40px;
+  }
+  footer h5 {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (max-width: 975px) {
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    height: 600px;
+    display: inline-block;
+  }
+  #voormail main .makenlinks, #voorweb main .makenlinks {
+    width: 37%;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    display: table;
+    height: 600px;
+  }
+  #voormail main .makeninhoud, #voormail main .verzameleninhoud, #voormail main .analyserentekst, #voorweb main .makeninhoud, #voorweb main .verzameleninhoud, #voorweb main .analyserentekst {
+    font-size: 0.95em;
+  }
+}
+@media only screen and (max-width: 930px) {
+  #voormail main .analyserenfotosrechts, #voorweb main .analyserenfotoslinks {
+    margin-bottom: 0%;
+  }
+  footer h5 {
+    font-size: 1.5em;
+  }
+  footer .footer {
+    width: 65%;
+    margin: 2.5% auto;
+  }
+}
+@media only screen and (max-width: 865px) {
+  header .headertekst h1 {
+    font-size: 2em;
+  }
+  header .headertekst h2 {
+    font-size: 0.9em;
+  }
+  header .navigatiebalk .navlang ul li a {
+    font-size: 0.85em;
+  }
+  header .navigatiebalk .navlang ul li#DEMOnav {
+    padding: 0.75%;
+    margin: 1.5%;
+  }
+  #index header {
+    height: 300px;
+  }
+  #index header .headertekst {
+    width: 75%;
+  }
+  #index header img.statistieken {
+    height: 200px;
+  }
+  #voorweb header .headertekst, #voormail header .headertekst, #tarieven header .headertekst, #demo header .headertekst, #demosucces header .headertekst, #error header .headertekst, #disclaimer header .headertekst {
+    width: 60%;
+  }
+  #voorweb header, #voormail header, #tarieven header, #demo header, #demosucces header, #error header, #disclaimer header {
+    height: 200px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #tarieven header img.statistieken, #demo header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 100px;
+  }
+  main {
+    width: 80%;
+  }
+  #index main a, #index main a {
+    margin: 5% auto;
+  }
+  #index main a .web h3, #index main a .mail h3 {
+    font-size: 1.25em;
+  }
+  #index main a .web p, #index main a .mail p {
+    font-size: 0.9em;
+  }
+  #index main .klantenslider button.pijllinks, #index main .klantenslider button.pijlrechts {
+        border-width: 0 7.5px 7.5px 0;
+        padding: 7.5px;
+  }
+  #index main a#klantworden {
+    margin: 0% auto 10% auto;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 1.25em;
+  }
+  #demo main .intro h3 {
+    font-size: 1.25em;
+  }
+  #demo main .intro p {
+    font-size: 0.9em;
+  }
+  #disclaimer main {
+    font-size: 0.9em;
+    line-height: 1.75em;
+  }
+  #disclaimer main p {
+    margin: 5% auto;
+  }
+  #error main p {
+    font-size: 1em;
+  }
+  footer {
+    padding: 2.5% 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header .navigatiebalk .navlang ul li a {
+    font-size: 0.8em;
+  }
+  #voormail main, #voorweb main {
+    margin: 10% auto;
+  }
+  #voormail main .maken, #voormail main .verzamelen, #voormail main .analyseren, #voorweb main .maken, #voorweb main .verzamelen, #voorweb main .analyseren {
+    margin: 15% auto 0% auto;
+  }
+  #voormail main .makenrechts, #voorweb main .makenrechts {
+    width: 100%;
+    height: auto;
+    margin: 2.5% 0% 0% 0%;
+  }
+  #voormail main .makenlinks, #voorweb main .makenlinks {
+    width: 100%;
+    padding: 5% 0%;
+  }
+  #voormail main .makenpadding, #voorweb main .makenpadding {
+    height: auto;
+  }
+  #voormail main .makeninhoud, #voormail main .verzameleninhoud, #voormail main .analyserentekst, #voorweb main .makeninhoud, #voorweb main .verzameleninhoud, #voorweb main .analyserentekst {
+    font-size: 0.85em;
+  }
+  footer .footer {
+    height: 135px;
+  }
+  footer h5 {
+    width: 90%;
+  }
+  footer .footer ul.contact li.socialmedia {
+    margin: 0.5% 0%;
+  }
+  footer .footer ul.contact li.socialmedia a img {
+    width: 45px;
+  }
+  footer .footer, footer ul.copyright li {
+    font-size: 0.9em;
+    line-height: 1.25em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #voormail main .analyserenlinks, #voorweb main .analyserenrechts {
+    padding: 1% 0% 0% 0%;
+  }
+  #voormail main .analyserenfotosrechts, #voorweb main .analyserenfotoslinks {
+    margin-bottom: 1%;
+  }
+}
+@media only screen and (max-width: 745px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    width: 70%;
+    font-size: 0.9em;
+  }
+  #index main a .web #naarweb i#pijlnaarweb, #index main a .mail #naarmail i#pijlnaarmail {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    margin: 0% 0% 0.5% 0%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  #index main a#klantworden {
+    width: 55%;
+    padding: 3% 2%;
+  }
+}
+@media only screen and (max-width: 715px) {
+  header .navigatiebalk a img {
+        width: 10%;
+        height: 10%;
+  }
+  header .navigatiebalk .navlang {
+    display: none;
+    visibility: hidden;
+  }
+  header .navigatiebalk .navkort {
+    display: block;
+    visibility: visible;
+  }
+  #index header .headertekst {
+    margin: 10% auto 10% 5%;
+  }
+  #voorweb header .headertekst, #voormail header .headertekst, #tarieven header .headertekst, #demo header .headertekst, #demosucces header .headertekst, #error header .headertekst, #disclaimer header .headertekst {
+    width: 65%;
+    margin-top: 10%;
+  }
+  #index main a .web p, #index main a .mail p {
+    font-size: 0.85em;
+    line-height: 1.5em;
+  }
+  #index main #smileys {
+    max-width: 100%;
+  }
+  #index main .klantenslider .review h4{
+    font-size: 1.25em;
+  }
+  #index main .klantenslider #review3 h4 {
+    font-size: 1em;
+    margin-top: 5%;
+  }
+  #index main .klantenslider .review p{
+    font-size: 0.85em;
+    line-height: 1.5em;
+  }
+  #index main .klantenslider button.pijllinks, #index main .klantenslider button.pijlrechts {
+        border-width: 0 5px 5px 0;
+  }
+  #voormail main, #voorweb main {
+    width: 90%;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 1em;
+  }
+  #tarieven main table.tabel tr th {
+    padding: 5%;
+    font-size: 1.25em;
+  }
+  #tarieven main table.tabel td {
+    font-size: 0.9em;
+  }
+  #tarieven main a#DEMOtarieven {
+    padding: 2.5% 1.5%;
+    width: 50%;
+    font-size: 1em;
+  }
+  #demo main .intro p {
+    font-size: 0.85em;
+  }
+  #demo main form label, #demo main form input, #demo main form .error-message {
+    font-size: 0.9em;
+  }
+  #demo main form button.buttonDEMOaanvragen {
+    padding: 1.5% 2.5%;
+    font-size: 0.95em;
+  }
+  #demosucces main .demosucces h3 {
+    font-size: 1.05em;
+    font-weight: 400;
+  }
+  #demosucces main .demosucces p {
+    font-size: 0.9em;
+    line-height: 1.25em;
+  }
+  #demosucces main .demosucces img {
+    width: 25px;
+  }
+  footer h5 {
+    line-height: 1.5em;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 610px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    padding: 2.5%;
+    width: 95%;
+    margin: 2.5% auto 0% 0%;
+    font-size: 0.9em;
+  }
+  #index main a .web #naarweb i#pijlnaarweb, #index main a .mail #naarmail i#pijlnaarmail {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    margin: 0% 0% 0.5% 0%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #voorweb header .headertekst, #voormail header .headertekst, #tarieven header .headertekst, #demo header .headertekst, #demosucces header .headertekst, #error header .headertekst, #disclaimer header .headertekst {
+    width: 90%;
+  }
+  #voorweb header, #voormail header, #tarieven header, #demo header, #demosucces header, #error header, #disclaimer header {
+    height: 175px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #tarieven header img.statistieken, #demo header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 150px;
+    width: 75%;
+    margin: 75px 0%;
+    opacity: 0.2;
+  }
+  #index main a#klantworden {
+    width: 60%;
+    font-size: 0.8em;
+  }
+  #index main a#klantworden i#pijlklantworden {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+  }
+  #disclaimer main {
+    font-size: 0.85em;
+    line-height: 2.25em;
+    margin: 10% auto;
+  }
+  #disclaimer main p {
+    margin: 7.5% auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  header .headertekst h1 {
+    font-size: 1.75em;
+  }
+  header .navigatiebalk .navkort .menu {
+    margin: 3.5% 10%;
+  }
+  header .navigatiebalk .navkort .navkleinscherm {
+    padding: 50px 6% 15px 0px;
+  }
+  header .navigatiebalk .navkort .navkleinscherm li {
+    font-size: 0.9em;
+    padding: 7.5px 25px;
+  }
+  #index header {
+    height: 225px;
+  }
+  #index header img.statistieken {
+    height: 150px;
+    width: 75%;
+    margin: 125px 0%;
+    opacity: 0.2;
+  }
+  #index header .headertekst {
+    width: 90%;
+  }
+  #index header .headertekst h2 {
+    width: 75%;
+  }
+  main {
+    width: 90%;
+  }
+  #index main a .web h3, #index main a .mail h3 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+  #voormail main .makennavigatie, #voormail main .verzamelennavigatie, #voormail main .analyserennavigatie, #voorweb main .makennavigatie, #voorweb main .verzamelennavigatie, #voorweb main .analyserennavigatie {
+    padding: 5%;
+  }
+  #demo main .intro h3 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+  #demo main form label, #demo main form input, #demo main form .error-message {
+    font-size: 0.85em;
+  }
+  #demo main form button.buttonDEMOaanvragen {
+    padding: 1.5% 2.5%;
+    font-size: 0.85em;
+  }
+  #demo main form button.buttonDEMOaanvragen i#pijlDEMOaanvragen {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+  }
+  #error main p {
+    font-size: 0.9em;
+    margin: 3.5% auto;
+    line-height: 1.35em;
+  }
+  footer {
+    padding: 5% 0%;
+  }
+  footer .footer {
+    height: 325px;
+  }
+  footer .footer ul.contact, footer .footer ul.sitemap {
+    float: none;
+    text-align: center;
+    margin: 10% auto;
+    clear: both;
+  }
+  footer .footer, footer ul.copyright li {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #index main .klantenslider #review3 h4 {
+    margin: 7.5% auto 0% auto;
+    width: 80%;
+  }
+  #voormail main .makeninhoud, #voormail main .verzameleninhoud, #voormail main .analyserentekst, #voorweb main .makeninhoud, #voorweb main .verzameleninhoud, #voorweb main .analyserentekst {
+    font-size: 0.75em;
+    line-height: 1.75em;
+  }
+  #tarieven main table.tabel tr th {
+    padding: 5%;
+    font-size: 1.05em;
+  }
+  #tarieven main table.tabel td {
+    font-size: 0.85em;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 55%;
+    font-size: 0.9em;
+  }
+  #tarieven main a#DEMOtarieven i#pijlDEMOtarieven {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+  }
+  #tarieven main table.tabel .tabellinks {
+    width: 85%;
+  }
+  #tarieven main table.tabel .tabelrechts {
+    width: 15%;
+  }
+  #tarieven main table.tabel .tabelrechts img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #index main a#klantworden {
+    width: 65%;
+    padding: 4%;
+  }
+  #demo main .intro p {
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width: 420px) {
+  header .navigatiebalk {
+        padding: 2% 5%;
+  }
+  header .navigatiebalk a img {
+        width: 12.5%;
+        height: 12.5%;
+  }
+  header .headertekst h1 {
+    font-size: 1.5em;
+  }
+  header .headertekst h2 {
+    font-size: 0.85em;
+  }
+  #index header .headertekst h2 {
+    width: 85%;
+  }
+  #voorweb header, #voormail header, #tarieven header, #demo header, #demosucces header, #error header, #disclaimer header {
+    height: 150px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #tarieven header img.statistieken, #demo header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 150px;
+    margin: 50px 0%;
+  }
+  #voorweb header .headertekst, #voormail header .headertekst, #tarieven header .headertekst, #demo header .headertekst, #demosucces header .headertekst, #error header .headertekst, #disclaimer header .headertekst {
+    width: 90%;
+    margin: 12.5% 5%;
+  }
+  #index main a#klantworden {
+    width: 75%;
+    padding: 5%;
+    font-size: 0.8em;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 0.85em;
+  }
+  #voormail main .pure-u-1-3:first-child, #voorweb main .pure-u-1-3:first-child {
+    padding: 0% 2% 0% 0%;
+  }
+  #voormail main .pure-u-1-3:nth-child(2), #voorweb main .pure-u-1-3:nth-child(2) {
+    padding: 0% 1%;
+  }
+  #voormail main .pure-u-1-3:last-child, #voorweb main .pure-u-1-3:last-child {
+    padding: 0% 0% 0% 2%;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 65%;
+    padding: 3%;
+  }
+  #demosucces main .demosucces h3 {
+    font-size: 1em;
+  }
+  #demosucces main .demosucces p {
+    font-size: 0.85em;
+  }
+  #demosucces main .demosucces img {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    padding: 4% 2%;
+    width: 95%;
+    margin: 2.5% auto 0% 0%;
+    font-size: 0.8em;
+  }
+  #index main a .web #naarweb i#pijlnaarweb, #index main a .mail #naarmail i#pijlnaarmail {
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    margin: 0% 0% 0.5% 0%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  header .headertekst h1 {
+    font-size: 1.25em;
+  }
+  #voorweb header, #voormail header, #demo header {
+    height: 125px;
+  }
+  #voorweb header img.statistieken, #voormail header img.statistieken, #demo header img.statistieken {
+    height: 125px;
+    margin: 50px 0%;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 0.75em;
+  }
+  #tarieven header, #demosucces header, #error header, #disclaimer header {
+    height: 100px;
+  }
+  #tarieven header img.statistieken, #demosucces header img.statistieken, #error header img.statistieken, #disclaimer header img.statistieken {
+    height: 100px;
+    margin: 50px 0%;
+  }
+  #index main a#klantworden {
+    width: 80%;
+  }
+  #error main p {
+    font-size: 0.85em;
+  }
+  footer h5 {
+    font-size: 1.1em;
+  }
+  footer .footer {
+    height: 285px;
+  }
+  footer .footer, footer ul.copyright li {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 365px) {
+  #index main a .web #naarweb, #index main a .mail #naarmail {
+    padding: 4% 2%;
+    width: 105%;
+    margin: 2.5% -5% -5% -5%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  #index main a .web #naarweb .bronzichtbaar, #index main a .mail #naarmail .bronzichtbaar, #index main a#klantworden .bronzichtbaar {
+    display: block;
+    visibility: visible;
+  }
+  #index main a#klantworden {
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width: 330px) {
+  header .navigatiebalk .navkort .menu {
+    margin: 5% 10%;
+  }
+  header .navigatiebalk .navkort .navkleinscherm {
+    padding: 50px 4% 15px 0px;
+  }
+  header .navigatiebalk .navkort .navkleinscherm li {
+    font-size: 0.9em;
+    padding: 5px 25px;
+  }
+  #index main a#klantworden {
+    width: 85%;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 0.7em;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 75%;
+    padding: 4%;
+  }
+  footer .footer, footer ul.copyright li {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (max-width: 315px) {
+  #index header {
+    height: 250px;
+  }
+  #index header img.statistieken {
+    height: 175px;
+  }
+  #voormail main .pure-u-1-3, #voorweb main .pure-u-1-3 {
+    font-size: 0.65em;
+  }
+  #voormail main .makeninhoud h3, #voormail main .verzameleninhoud h3, #voormail main .analyserentekst h3, #voorweb main .makeninhoud h3, #voorweb main .verzameleninhoud h3, #voorweb main .analyserentekst h3 {
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width: 285px) {
+  #index header {
+    height: 275px;
+  }
+  #index header img.statistieken {
+    height: 200px;
+  }
+  #tarieven main a#DEMOtarieven {
+    width: 90%;
+    padding: 5%;
+  }
+}
